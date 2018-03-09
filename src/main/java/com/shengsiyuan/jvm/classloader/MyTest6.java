@@ -1,0 +1,26 @@
+package com.shengsiyuan.jvm.classloader;
+
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader;
+
+public class MyTest6 {
+    public static void main(String[] args) {
+        Singleton singleton = Singleton.getInstance();
+        System.out.println("counter:" + Singleton.counter);
+        System.out.println("counter1:" + Singleton.counter1);
+    }
+}
+
+class Singleton {
+    public static int counter;
+
+    public static Singleton instance = new Singleton();
+    private Singleton() {
+        counter++;
+        counter1++; //准备阶段的意义，
+        System.out.println("构造方法里:" + counter1);
+    }
+    public static int counter1 = 5;
+    public static Singleton getInstance() {
+        return instance;
+    }
+}
