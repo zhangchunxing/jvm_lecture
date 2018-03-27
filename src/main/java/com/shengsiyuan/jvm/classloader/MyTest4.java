@@ -13,7 +13,11 @@ public class MyTest4 {
         MyParent4[] myParent4 = new MyParent4[1];
         System.out.println(myParent4.getClass());
 
-        MyParent4[][] myParent41 = new MyParent4[1][1];
+        Class<?> clazz = myParent4.getClass();
+        System.out.println(clazz.getClassLoader());
+        System.out.println(MyParent4.class.getClassLoader());
+
+        /*MyParent4[][] myParent41 = new MyParent4[1][1];
         System.out.println(myParent41.getClass());
         System.out.println(myParent41.getClass().getSuperclass());
         System.out.println(myParent4.getClass().getSuperclass());
@@ -21,7 +25,7 @@ public class MyTest4 {
 
         int[] ints = new int[1];
         System.out.println(ints.getClass());
-        System.out.println(myParent4.getClass().getSuperclass());
+        System.out.println(myParent4.getClass().getSuperclass());*/
 
     }
 }
