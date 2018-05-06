@@ -1,6 +1,5 @@
 package com.shengsiyuan.jvm.classloader;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader;
 
 public class MyTest6 {
     public static void main(String[] args) {

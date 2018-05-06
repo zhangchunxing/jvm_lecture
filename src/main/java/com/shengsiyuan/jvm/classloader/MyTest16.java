@@ -71,6 +71,10 @@ public class MyTest16 extends ClassLoader {
                 '}';
     }
 
+    public void setPath(String path) {
+        this.path = path;
+    }
+
     public static void main(String[] args) throws Exception {
         MyTest16 loader1 = new MyTest16("loader1");
 
