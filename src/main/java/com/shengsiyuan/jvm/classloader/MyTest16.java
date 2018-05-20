@@ -24,6 +24,12 @@ public class MyTest16 extends ClassLoader {
         this.classLoaderName = classLoaderName;
     }
 
+    public MyTest16(ClassLoader parent) {
+        super(parent); // 将系统类加载器当作该类加载器的父加载器
+    }
+
+
+
     @Override
     public Class<?> findClass(String name) {
         System.out.println("name = [" + name + "]");
