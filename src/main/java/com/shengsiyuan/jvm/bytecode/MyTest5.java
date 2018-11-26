@@ -13,15 +13,15 @@ package com.shengsiyuan.jvm.bytecode;
  */
 public class MyTest5 {
     // 方法重载是一种静态的行为
-    private void test(Grandpa g) {
+    public void test(Grandpa g) {
         System.out.println("Grandpa");
     }
 
-    private void test(Father g) {
+    public void test(Father g) {
         System.out.println("Father");
     }
 
-    private void test(Son g) {
+    public void test(Son g) {
         System.out.println("Son");
     }
 
