@@ -30,6 +30,9 @@ public class MyTest26 {
         ServiceLoader<Driver> serviceLoader = ServiceLoader.load(Driver.class);
 
         Iterator<Driver> iterable = serviceLoader.iterator();
+        // for (Driver driver : serviceLoader) {
+        //
+        // }
 
         while (iterable.hasNext()) {
             Driver driver = iterable.next();

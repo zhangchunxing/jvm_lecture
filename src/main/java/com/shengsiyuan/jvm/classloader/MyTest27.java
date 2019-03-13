@@ -5,7 +5,8 @@ import java.sql.DriverManager;
 
 public class MyTest27 {
     public static void main(String[] args) throws Exception {
-        //Class.forName("com.mysql.jdbc.Driver");
+        // 会初始化com.mysql.jdbc.Driver
+        Class.forName("com.mysql.jdbc.Driver");
         Connection connection = DriverManager.getConnection("url", "username", "pwd");
     }
 }
