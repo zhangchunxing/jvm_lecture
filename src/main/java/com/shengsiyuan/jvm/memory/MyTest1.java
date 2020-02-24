@@ -30,10 +30,11 @@ import java.util.List;
  * @create: 2018-12-16
  **/
 public class MyTest1 {
-    public static void main(String[] args) {
-        List<MyTest1> list = new ArrayList<>();
+    public static void main(String[] args) throws InterruptedException {
+        List<LargeObject> list = new ArrayList<>(6000);
+        // Thread.sleep(50000);
         for(;;) {
-            list.add(new MyTest1());
+            list.add(new LargeObject());
             System.gc();
         }
     }
