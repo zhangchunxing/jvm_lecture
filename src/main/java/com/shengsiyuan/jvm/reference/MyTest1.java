@@ -20,6 +20,7 @@ public class MyTest1 {
         Date date = new Date();
         SoftReference<Date> reference1 = new SoftReference<>(date);
 
+        System.gc();
         Date date1 = reference1.get();
 
         if (null != date1) {
